@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_layout_heroselection"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/owGray">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT YOUR HEROES"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!--    Player1's Layout    -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/player1_loaded"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:text="Player 1"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/player1_hero_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scrollbars="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <!--    Player2's Layout    -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+    <TextView
+            android:id="@+id/player2_loaded"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:text="Player 2"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/player2_hero_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scrollbars="vertical"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_above="@+id/ready_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="(Each player must select 2 heroes)"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        />
+    <Button
+        android:id="@+id/ready_button"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Ready"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/button_selector"
+        android:enabled="false"
+        android:onClick="goToGame"/>
+
+</RelativeLayout>

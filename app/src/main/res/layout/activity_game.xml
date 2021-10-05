@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root_layout_game"
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="@color/owGray">
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/ow_logo_light"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!--    PLAYER1_HERO1 LAYOUT    -->
+    <TextView
+        android:id="@+id/player1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/p1_hero1_linear_layout"
+        android:layout_alignStart="@id/p1_hero1_linear_layout"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="30dp"
+        android:text="Player 1"
+        android:textColor="@color/owOrange"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/player1_ability_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player1_text"
+        android:layout_marginTop="240dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginStart="55dp"
+        android:text="PLAYER 1: CHOOSE AN ABILITY"/>
+
+
+    <LinearLayout
+        android:id="@+id/p1_hero1_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp">
+
+        <TextView
+            android:id="@+id/p1_hero1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="Hero1 Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/p1_hero1_HP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="HP: Hero1 HP"/>
+
+        <ImageView
+            android:id="@+id/p1_hero1_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:src="@drawable/mercy_pixel"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/p1_hero1_ability1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p1Hero1Ability1"/>
+
+            <ImageView
+                android:id="@+id/p1_hero1_ability2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p1Hero1Ability2"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <!--    PLAYER1_HERO2 LAYOUT    -->
+    <LinearLayout
+        android:id="@+id/p1_hero2_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/p1_hero1_linear_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/p1_hero2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="Hero2 Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/p1_hero2_HP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="HP: Hero2 HP"/>
+
+        <ImageView
+            android:id="@+id/p1_hero2_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:src="@drawable/mercy_pixel"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/p1_hero2_ability1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p1Hero2Ability1"/>
+
+            <ImageView
+                android:id="@+id/p1_hero2_ability2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p1Hero2Ability2"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <!--    PLAYER2_HERO1 LAYOUT    -->
+    <LinearLayout
+        android:id="@+id/p2_hero1_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/p2_hero2_linear_layout"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:id="@+id/p2_hero1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="Hero1 Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/p2_hero1_HP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="HP: Hero1 HP"/>
+
+        <ImageView
+            android:id="@+id/p2_hero1_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleX="-1"
+            tools:src="@drawable/mercy_pixel"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/p2_hero1_ability1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p2Hero1Ability1"/>
+
+            <ImageView
+                android:id="@+id/p2_hero1_ability2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p2Hero1Ability2"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <!--    PLAYER2_HERO2 LAYOUT    -->
+    <TextView
+        android:id="@+id/player2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/p2_hero1_linear_layout"
+        android:layout_alignStart="@id/p2_hero1_linear_layout"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="30dp"
+        android:text="Player 2"
+        android:textColor="@color/owOrange"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/player2_ability_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/player2_text"
+        android:layout_marginTop="240dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginStart="455dp"
+        android:text="PLAYER 2: CHOOSE AN ABILITY"/>
+
+    <LinearLayout
+        android:id="@+id/p2_hero2_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/p2_hero2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="Hero2 Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/p2_hero2_HP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="HP: Hero2 HP"/>
+
+        <ImageView
+            android:id="@+id/p2_hero2_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleX="-1"
+            tools:src="@drawable/mercy_pixel" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/p2_hero2_ability1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p2Hero2Ability1"/>
+
+            <ImageView
+                android:id="@+id/p2_hero2_ability2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                tools:src="@drawable/abc_vector_test"
+                android:onClick="p2Hero2Ability2"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/player_target_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/target_buttons_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white"
+        android:text="Player, pick a target."
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/target_buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/target1_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_selector"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            tools:text="Heal Mercy (+30 hp)"
+            android:visibility="invisible"
+            android:onClick="castAbilityOnTarget1"/>
+
+        <Button
+            android:id="@+id/target2_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_selector"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            tools:text="Heal Mercy (+30 hp)"
+            android:visibility="invisible"
+            android:onClick="castAbilityOnTarget2"/>
+    </LinearLayout>
+
+</RelativeLayout>

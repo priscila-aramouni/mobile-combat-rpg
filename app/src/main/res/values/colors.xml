@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f69c1a</color>
+    <color name="colorPrimaryDark">#4A4C4E</color>
+    <color name="colorAccent">#f69c1a</color>
+    <color name="owGray">#4A4C4E</color>
+    <color name="owOrange">#f69c1a</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="heroList">#AFAFAF</color>
+</resources>
